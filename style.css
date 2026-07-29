@@ -1,0 +1,7 @@
+:root {
+    --purdue-old-gold: #CFB991;
+}
+
+body {
+    background-color: var(--purdue-old-gold);
+}
