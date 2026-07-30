@@ -1,7 +1,23 @@
 :root {
+    --dark-grey: #212121;
     --purdue-old-gold: #CFB991;
 }
 
 body {
+    background-image: url(./wallpaper/BoilermakerOS_Wallpaper_Old_Gold.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: var(--dark-grey);
+    font-family: sans-serif;
+}
+
+.window {
     background-color: var(--purdue-old-gold);
+    border: solid;
+    width: fit-content;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
