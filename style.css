@@ -38,7 +38,7 @@ select {
 body {
     height: 100vh;
     background-position: 50%;
-    background-image: url(./wallpaper/BoilermakerOS_Wallpaper_Old_Gold.png);
+    background-image: url(./image/BoilermakerOS_Wallpaper_Old_Gold.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: var(--dark-grey);
@@ -58,6 +58,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     display: flex;
     flex-direction: column;
     gap: 0.5em;
