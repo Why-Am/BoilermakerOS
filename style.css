@@ -1,6 +1,7 @@
 :root {
     --dark-grey: #212121;
     --purdue-old-gold: #CFB991;
+    --old-gold-solid-gradient: linear-gradient(white -30%, var(--purdue-old-gold) 10%, var(--purdue-old-gold) 90%, black 140%);
 }
 
 /* start reset */
@@ -50,8 +51,11 @@ body {
 }
 
 .window {
-    background-color: var(--purdue-old-gold);
-    border: solid;
+    /* background-color: var(--purdue-old-gold); */
+    background: var(--old-gold-solid-gradient);
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 0.5em;
     width: fit-content;
     padding: 1rem;
     position: absolute;
@@ -67,6 +71,8 @@ body {
 #bottom-bar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--purdue-old-gold);
+    /* background-color: var(--purdue-old-gold); */
+    background: var(--old-gold-solid-gradient);
     padding: 0.5rem;
+    user-select: none;
 }
