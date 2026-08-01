@@ -1,5 +1,5 @@
 :root {
-    --dark-grey: #212121;
+    --background-dark-grey: #212121;
     --purdue-old-gold: #CFB991;
     --old-gold-solid-gradient: linear-gradient(white -30%, var(--purdue-old-gold) 10%, var(--purdue-old-gold) 90%, black 140%);
 }
@@ -43,7 +43,7 @@ body {
     background-position: 50%;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-color: var(--dark-grey);
+    background-color: var(--background-dark-grey);
 
     font-family: sans-serif;
 
@@ -55,8 +55,11 @@ body {
 }
 
 .window {
-    border-style: solid;
+    /* border-style: solid;
+    border-color: grey; */
     border-width: 0.1em;
+    box-shadow: var(--background-dark-grey) 0em 0.2em 0.5em;
+
     border-radius: 0.5em;
     background-color: whitesmoke;
     width: fit-content;
@@ -78,6 +81,7 @@ body {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .window-content {
@@ -86,6 +90,18 @@ body {
     flex-direction: column;
     gap: 0.5em;
     user-select: text;
+}
+
+.window-button-close {
+    background-image: url(image/Window_Close_Unlit.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 1.1rem;
+    width: 1.1rem;
+}
+
+.window-button-close:hover {
+    background-image: url(image/Window_Close_Lit.png);
 }
 
 #bottom-bar {
