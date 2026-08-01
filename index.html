@@ -9,12 +9,20 @@
 </head>
 
 <body>
-    <div class="window">
-        <h1>Welcome to BoilermakerOS</h1>
-        <p>BoilermakerOS is an unofficial Purdue University themed webOS</p>
+    <div class="window" id="welcome">
+        <div class="window-header" id="welcome-header">
+            <p>Welcome</p>
+            <p id="welcome-close">Close</p>
+        </div>
+        <div class="window-content">
+            <h1>Welcome to BoilermakerOS</h1>
+            <p>BoilermakerOS is an unofficial Purdue University themed webOS</p>
+        </div>
     </div>
+
     <div id="bottom-bar">
-        <p>BoilermakerOS</p>
+        <!-- TODO: change window open button -->
+        <p id="welcome-open">BoilermakerOS</p>
         <p id="time-display">Time</p>
     </div>
 

@@ -1,6 +1,9 @@
-import { makeDraggable } from "./module/window_dragging.js";
+import { makeDraggable, closeWindow, openWindow } from "./module/window.js";
 
 const timeDisplay = document.querySelector("#time-display");
+const welcomeWindow = document.querySelector("#welcome")
+const welcomeWindowClose = document.querySelector("#welcome-close")
+const welcomeWindowOpen = document.querySelector("#welcome-open")
 
 function updateTime() {
     const currentTime = new Date().toLocaleString();
@@ -9,4 +12,12 @@ function updateTime() {
 
 setInterval(updateTime, 1000);
 
-makeDraggable(document.querySelector(".window"));
+makeDraggable(welcomeWindow);
+
+welcomeWindowClose.addEventListener("click", () => {
+    closeWindow(welcomeWindow);
+});
+
+welcomeWindowOpen.addEventListener("click", () => {
+    openWindow(welcomeWindow);
+})
