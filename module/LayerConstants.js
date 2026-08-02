@@ -1,0 +1,2 @@
+export const UNFOCUSED_WINDOW_LAYER = 0;
+export const FOCUSED_WINDOW_LAYER = 1;

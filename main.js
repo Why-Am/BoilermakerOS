@@ -1,11 +1,10 @@
-import { initializeWindow, windowState } from "./module/Window.js";
+import { WindowManager } from "./module/WindowManager.js"
 
 const timeDisplay = document.querySelector("#time-display");
 const welcomeWindow = document.querySelector("#welcome");
 const linksWindow = document.querySelector("#links")
 
-let selectedIcon = undefined;
-
+// Initialize time
 function updateTime() {
     const currentTime = new Date().toLocaleString();
     timeDisplay.innerHTML = currentTime;
@@ -13,5 +12,8 @@ function updateTime() {
 
 setInterval(updateTime, 1000);
 
-initializeWindow(welcomeWindow);
-initializeWindow(linksWindow);
+// Initialize wm
+let wm = new WindowManager();
+
+wm.registerWindow(welcomeWindow);
+wm.registerWindow(linksWindow);
