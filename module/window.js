@@ -1,7 +1,6 @@
 // Adapted from w3schools https://www.w3schools.com/howto/howto_js_draggable.asp
-
 // Makes an HTML element draggable
-export function makeDraggable(element) {
+function makeDraggable(element) {
     // Step 2: Set up variables to keep track of the element's position.
     var initialX = 0;
     var initialY = 0;
@@ -52,10 +51,34 @@ export function makeDraggable(element) {
     }
 }
 
-export function closeWindow(element) {
+function makeClosable(window) {
+    const closeButton = document.getElementById(window.id + "-close");
+    if (closeButton) {
+        closeButton.addEventListener("click", () => closeWindow(window));
+    }
+    const openButton = document.getElementById(window.id + "-open");
+    if (openButton) {
+        openButton.addEventListener("click", () => openWindow(window));
+    }
+}
+
+function closeWindow(element) {
     element.style.display = "none";
 }
 
-export function openWindow(element) {
+function openWindow(element) {
     element.style.display = "flex";
+}
+
+function makeFocusable(window) {
+    window.addEventListener("mousedown", () => handleWindowTap(window));
+}
+
+function handleWindowTap(window) {
+
+}
+
+export function initializeWindow(window) {
+    makeClosable(window);
+    makeDraggable(window);
 }

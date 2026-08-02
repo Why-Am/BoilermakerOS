@@ -9,20 +9,39 @@
 </head>
 
 <body>
-    <div class="window" id="welcome">
-        <div class="window-header" id="welcome-header">
-            <p>Welcome</p>
-            <div id="welcome-close" class="window-button-close"></div>
+    <div id="desktop">
+        <div class="window" id="welcome">
+            <div class="window-header" id="welcome-header">
+                <p>Welcome</p>
+                <div id="welcome-close" class="window-button-close"></div>
+            </div>
+            <div class="window-content">
+                <h1>Welcome to BoilermakerOS</h1>
+                <p>BoilermakerOS is an unofficial Purdue University themed webOS</p>
+            </div>
         </div>
-        <div class="window-content">
-            <h1>Welcome to BoilermakerOS</h1>
-            <p>BoilermakerOS is an unofficial Purdue University themed webOS</p>
+
+        <div class="window" id="links">
+            <div class="window-header" id="welcome-header">
+                <p>Links</p>
+                <div id="links-close" class="window-button-close"></div>
+            </div>
+            <div class="window-content">
+                <h1>Some Links</h1>
+                <a href="https://www.boilerexams.com" target="_blank">Boilerexams</a>
+            </div>
+        </div>
+
+        <div id="desktop-apps">
+            <div class="desktop-app" id="welcome-open">
+                <img src="image/app_icon/Welcome.png" class="app-icon">
+                <p class="app-title">Welcome</p>
+            </div>
         </div>
     </div>
 
     <div id="bottom-bar">
-        <!-- TODO: change window open button -->
-        <p id="welcome-open">BoilermakerOS</p>
+        <p>BoilermakerOS</p>
         <p id="time-display">Time</p>
     </div>
 
