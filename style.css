@@ -49,6 +49,7 @@ body {
 
     display: flex;
     flex-direction: column;
+    align-items: start;
     justify-content: end;
 
     user-select: none;
@@ -111,6 +112,9 @@ body {
 #desktop-apps {
     padding: 2em;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5em;
 }
 
 .desktop-app {
@@ -133,6 +137,7 @@ body {
 
 #bottom-bar {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     /* background-color: var(--purdue-old-gold); */
     background: var(--old-gold-solid-gradient);
