@@ -1,4 +1,4 @@
-import { initializeWindow, windowState } from "./module/window.js";
+import { initializeWindow, windowState } from "./module/Window.js";
 
 const timeDisplay = document.querySelector("#time-display");
 const welcomeWindow = document.querySelector("#welcome");
