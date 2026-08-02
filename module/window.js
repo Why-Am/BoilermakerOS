@@ -74,10 +74,11 @@ export class Window {
 
     show() {
         this.element.style.display = "flex";
+        this.focusWindow();
     }
 
     makeFocusable() {
-        this.element.addEventListener("mousedown", () => this.focusWindow(window));
+        this.element.addEventListener("mousedown", () => this.focusWindow());
     }
 
     focusWindow() {
