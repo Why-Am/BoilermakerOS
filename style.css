@@ -59,7 +59,7 @@ body {
     /* border-style: solid;
     border-color: grey; */
     border-width: 0.1em;
-    box-shadow: var(--background-dark-grey) 0em 0.2em 0.5em;
+    box-shadow: black 0em 0.2em 0.5em;
 
     border-radius: 0.5em;
     background-color: whitesmoke;
