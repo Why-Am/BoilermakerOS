@@ -61,10 +61,14 @@ export class Window {
         const closeButton = document.getElementById(this.element.id + "-close");
         if (closeButton) {
             closeButton.addEventListener("click", () => this.hide());
+        } else {
+            console.error("no close button");
         }
         const openButton = document.getElementById(this.element.id + "-open");
         if (openButton) {
             openButton.addEventListener("click", () => this.show());
+        } else {
+            console.error("no open button");
         }
     }
 

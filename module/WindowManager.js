@@ -6,14 +6,10 @@ export class WindowManager {
         this.windows = [];
     }
 
-    registerWindow(element, isShown) {
+    registerWindow(element) {
         const window = new Window(element, this)
         this.windows.push(window);
-        if (isShown) {
-            window.show();
-        } else {
-            window.hide();
-        }
+        window.hide();
     }
 
     requestFocus(window) {
@@ -21,5 +17,14 @@ export class WindowManager {
             curWindow.element.style.zIndex = UNFOCUSED_WINDOW_LAYER;
         }
         window.element.style.zIndex = FOCUSED_WINDOW_LAYER;
+    }
+
+    showWindowByID(id) {
+        for (const window of this.windows) {
+            if (window.element.id === id) {
+                window.show();
+                break;
+            }
+        }
     }
 }

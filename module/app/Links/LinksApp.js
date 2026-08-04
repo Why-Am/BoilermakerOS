@@ -1,4 +1,16 @@
-export class LinksApp {
+import { App } from "../App.js";
+
+export class LinksApp extends App {
+    appID = "links";
+    appName = "Links";
+    iconPath = "image/app_icon/Links.png"
+    element = document.getElementById(this.appID);
+
+    initialize(wm) {
+        this.addDesktopIconAndRegisterWithWM(wm);
+        this.loadContent();
+    }
+
     loadContent() {
         this.sidebar = document.querySelector("#links .sidebar");
         this.content = document.querySelector("#links .text-content");
