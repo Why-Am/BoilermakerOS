@@ -53,6 +53,11 @@ export class LinksApp {
         for (const link of selectedCategory.links) {
             const li = document.createElement("li");
             const a = document.createElement("a");
+
+            if (link.starred) {
+                li.setAttribute("class", "starred-link");
+            }
+
             a.href = link.url;
             a.target = "_blank";
             a.innerText = link.title;
@@ -69,7 +74,7 @@ export class LinksApp {
 const links = [
     {
         category: "Miscellaneous",
-        description: "Some miscellaneous links. Click a category on the left sidebar to find other links.",
+        description: "Some miscellaneous links. Click a category on the left sidebar to find other links. A star (⭐) means a link is recommended.",
         links: [
             {
                 title: "Purdue Website",

@@ -21,4 +21,4 @@ linksApp.loadContent();
 let wm = new WindowManager();
 
 wm.registerWindow(welcomeWindow, true);
-wm.registerWindow(linksWindow, true); // TODO: change to false
+wm.registerWindow(linksWindow, false); // TODO: change to false
