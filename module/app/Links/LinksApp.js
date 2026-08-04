@@ -11,7 +11,7 @@ export class LinksApp {
         for (const category of links) {
             const option = document.createElement("div");
             option.setAttribute("class", "sidebar-option");
-            option.innerText = category.category;
+            option.innerText = formatCategoryTitle(category)
             option.addEventListener("click", () => this.activateOption(option, category.category))
             this.sidebar.appendChild(option);
 
@@ -44,7 +44,7 @@ export class LinksApp {
         }
 
         const header = document.createElement("h1");
-        header.innerText = selectedCategory.category;
+        header.innerText = formatCategoryTitle(selectedCategory);
 
         const description = document.createElement("p");
         description.innerText = selectedCategory.description;
@@ -71,9 +71,18 @@ export class LinksApp {
     }
 }
 
+function formatCategoryTitle(category) {
+    if (category.icon) {
+        return `${category.icon} ${category.category}`;
+    } else {
+        return `${category.category}`;
+    }
+}
+
 const links = [
     {
         category: "Miscellaneous",
+        icon: "⬜",
         description: "Some miscellaneous links. Click a category on the left sidebar to find other links. A star (⭐) means a link is recommended.",
         links: [
             {
@@ -100,6 +109,7 @@ const links = [
     },
     {
         category: "Portals",
+        icon: "👤",
         description: "Access these websites with a Purdue student account.",
         links: [
             {
@@ -142,6 +152,7 @@ const links = [
     },
     {
         category: "Calendars",
+        icon: "📅",
         description: "Note down important dates with these calendars.",
         links: [
             {
@@ -156,6 +167,7 @@ const links = [
     },
     {
         category: "Classes",
+        icon: "📚",
         description: "Use these websites to find courses at Purdue.",
         links: [
             {
@@ -179,6 +191,7 @@ const links = [
     },
     {
         category: "Study Resources",
+        icon: "✏️",
         description: "Use these websites to prepare for exams.",
         links: [
             {
@@ -195,6 +208,7 @@ const links = [
     },
     {
         category: "Career and Academic",
+        icon: "🎓",
         description: null,
         links: [
             {
@@ -236,6 +250,7 @@ const links = [
     },
     {
         category: "Athletics and Arts",
+        icon: "🏈",
         description: null,
         links: [
             {
@@ -272,6 +287,7 @@ const links = [
     },
     {
         category: "Health and Wellness",
+        icon: "🩹",
         description: "Get well.",
         links: [
             {
@@ -308,6 +324,7 @@ const links = [
     },
     {
         category: "Housing",
+        icon: "🏚️",
         description: "Find a place to lay down every night.",
         links: [
             {
@@ -324,6 +341,7 @@ const links = [
     },
     {
         category: "Dining and Culinary",
+        icon: "🍽️",
         description: "Explore gastronomy at Purdue.",
         links: [
             {
@@ -350,6 +368,7 @@ const links = [
     },
     {
         category: "Stores",
+        icon: "🏪",
         description: "Buy books and stuff.",
         links: [
             {
