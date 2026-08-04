@@ -6,8 +6,14 @@ export class WindowManager {
         this.windows = [];
     }
 
-    registerWindow(element) {
-        this.windows.push(new Window(element, this));
+    registerWindow(element, isShown) {
+        const window = new Window(element, this)
+        this.windows.push(window);
+        if (isShown) {
+            window.show();
+        } else {
+            window.hide();
+        }
     }
 
     requestFocus(window) {

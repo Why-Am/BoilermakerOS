@@ -1,3 +1,4 @@
+import { LinksApp } from "./module/app/Links/LinksApp.js";
 import { WindowManager } from "./module/WindowManager.js"
 
 const timeDisplay = document.querySelector("#time-display");
@@ -12,8 +13,12 @@ function updateTime() {
 
 setInterval(updateTime, 1000);
 
+// Initialize apps
+const linksApp = new LinksApp();
+linksApp.loadContent();
+
 // Initialize wm
 let wm = new WindowManager();
 
-wm.registerWindow(welcomeWindow);
-wm.registerWindow(linksWindow);
+wm.registerWindow(welcomeWindow, true);
+wm.registerWindow(linksWindow, true); // TODO: change to false
