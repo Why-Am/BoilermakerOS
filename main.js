@@ -1,5 +1,6 @@
 import { LinksApp } from "./module/app/Links/LinksApp.js";
 import { WelcomeApp } from "./module/app/Welcome/WelcomeApp.js";
+import { WLClockApp } from "./module/app/WLClock/WLClockApp.js";
 import { WindowManager } from "./module/WindowManager.js"
 
 const timeDisplay = document.querySelector("#time-display");
@@ -19,7 +20,7 @@ let wm = new WindowManager();
 
 const welcomeApp = new WelcomeApp();
 
-const apps = [welcomeApp, new LinksApp()];
+const apps = [welcomeApp, new LinksApp(), new WLClockApp()];
 
 for (const app of apps) {
     app.initialize(wm);

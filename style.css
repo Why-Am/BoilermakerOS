@@ -169,6 +169,14 @@ ul {
     width: 30em;
 }
 
+#wl-clock {
+    width: 30em;
+}
+
+#wl-clock-time {
+    font-size: xx-large;
+}
+
 #desktop {
     flex-grow: 1;
 }
