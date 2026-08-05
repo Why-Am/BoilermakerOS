@@ -1,19 +1,10 @@
 import { LinksApp } from "./module/app/Links/LinksApp.js";
 import { WelcomeApp } from "./module/app/Welcome/WelcomeApp.js";
 import { WLClockApp } from "./module/app/WLClock/WLClockApp.js";
+import { initializeBottomBarTime } from "./module/BottomBarTime.js";
 import { WindowManager } from "./module/WindowManager.js"
 
-const timeDisplay = document.querySelector("#time-display");
-const welcomeWindow = document.querySelector("#welcome");
-const linksWindow = document.querySelector("#links")
-
-// Initialize time
-function updateTime() {
-    const currentTime = new Date().toLocaleString();
-    timeDisplay.innerHTML = currentTime;
-}
-
-setInterval(updateTime, 1000);
+initializeBottomBarTime();
 
 // Initialize apps
 let wm = new WindowManager();
