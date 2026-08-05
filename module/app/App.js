@@ -1,12 +1,18 @@
+import { WindowManager } from "../WindowManager.js";
+
 export class App {
     iconPath;
     appID;
     appName;
     element;
 
-    addDesktopIconAndRegisterWithWM(windowManager) {
+    /**
+     * @param {WindowManager} wm 
+     */
+    initialize(wm) {
         this.#addDesktopIcon();
-        this.#registerWindowWithWM(windowManager);
+        this.#registerWindowWithWM(wm);
+        this.#setWindowTitle();
     }
 
     #registerWindowWithWM(windowManager) {
@@ -33,5 +39,14 @@ export class App {
         div.appendChild(p);
 
         desktop.appendChild(div);
+    }
+
+    #setWindowTitle() {
+        const windowTitle = document.querySelector(`#${this.appID}-header p`);
+        if (!windowTitle) {
+            console.error("Couldn't find window title for " + this.appID);
+        }
+
+        windowTitle.innerText = this.appName;
     }
 }

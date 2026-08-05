@@ -7,7 +7,7 @@ export class LinksApp extends App {
     element = document.getElementById(this.appID);
 
     initialize(wm) {
-        this.addDesktopIconAndRegisterWithWM(wm);
+        super.initialize(wm);
         this.loadContent();
     }
 
