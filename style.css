@@ -43,6 +43,7 @@ select {
 
 body {
     height: 100vh;
+    overflow: hidden;
 
     background-image: url(./image/BoilermakerOS_Wallpaper_Old_Gold.png);
     background-position: 50%;

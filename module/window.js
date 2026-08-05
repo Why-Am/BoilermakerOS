@@ -78,6 +78,11 @@ export class Window {
 
     show() {
         this.element.style.display = "flex";
+
+        // Reset position
+        this.element.style.top = null;
+        this.element.style.left = null;
+
         this.focusWindow();
     }
 
