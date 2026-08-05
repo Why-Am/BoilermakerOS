@@ -1,4 +1,3 @@
-import { FOCUSED_WINDOW_LAYER, UNFOCUSED_WINDOW_LAYER } from "./LayerConstants.js";
 import { Window } from "./Window.js";
 
 export class WindowManager {
@@ -12,11 +11,15 @@ export class WindowManager {
         window.hide();
     }
 
-    requestFocus(window) {
-        for (const curWindow of this.windows) {
-            curWindow.element.style.zIndex = UNFOCUSED_WINDOW_LAYER;
+    requestFocus(windowToFocus) {
+        const maxZIndex = this.windows.length;
+
+        for (const window of this.windows) {
+            if (window.element.style.zIndex > windowToFocus.element.style.zIndex) {
+                window.element.style.zIndex--;
+            }
         }
-        window.element.style.zIndex = FOCUSED_WINDOW_LAYER;
+        windowToFocus.element.style.zIndex = maxZIndex;
     }
 
     showWindowByID(id) {
