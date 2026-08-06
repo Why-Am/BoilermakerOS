@@ -214,6 +214,10 @@ ul {
     gap: 1.5em;
 }
 
+#splash-text {
+    text-align: center;
+}
+
 .desktop-app {
     display: flex;
     flex-direction: column;
@@ -235,9 +239,19 @@ ul {
 #bottom-bar {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    gap: 2em;
     /* background-color: var(--purdue-old-gold); */
     background: var(--old-gold-solid-gradient);
     padding: 0.5rem;
     user-select: none;
+}
+
+#bottom-bar * {
+    /* Better than setting `justify-content: space-between` in #bottom-bar
+    because now the center element is properly centered */
+    flex-grow: 1;
+}
+
+#time-display {
+    text-align: right;
 }

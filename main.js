@@ -3,9 +3,11 @@ import { WelcomeApp } from "./module/app/Welcome/WelcomeApp.js";
 import { WLClockApp } from "./module/app/WLClock/WLClockApp.js";
 import { WLWeatherApp } from "./module/app/WLWeather/WLWeatherApp.js";
 import { initializeBottomBarTime } from "./module/BottomBarTime.js";
+import { setSplashText } from "./module/SplashText.js";
 import { WindowManager } from "./module/WindowManager.js"
 
 initializeBottomBarTime();
+setSplashText();
 
 // Initialize apps
 let wm = new WindowManager();
