@@ -9,16 +9,20 @@ export class WLClockApp extends App {
 
     timeDisplay = document.getElementById(this.appID + "-time");
     timeOptions = {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric",
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
         timeZone: "America/Indianapolis",
         timeZoneName: "short",
     };
+    dateDisplay = document.getElementById(this.appID + "-date");
+    dateOptions = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        timeZone: "America/Indianapolis",
+    }
 
     /**
      * @param {WindowManager} wm 
@@ -29,7 +33,8 @@ export class WLClockApp extends App {
     }
 
     updateTime() {
-        const WLTime = new Date().toLocaleString("en-US", this.timeOptions);
-        this.timeDisplay.innerText = WLTime;
+        const now = new Date();
+        this.timeDisplay.innerText = now.toLocaleTimeString("en-US", this.timeOptions);
+        this.dateDisplay.innerText = now.toLocaleDateString("en-US", this.dateOptions);
     }
 }

@@ -170,21 +170,26 @@ ul {
     width: 30em;
 }
 
-#wl-clock {
+#wl-clock,
+#wl-weather {
     width: 30em;
 }
 
 #wl-clock-time {
-    font-size: xx-large;
+    font-size: 3em;
 }
 
+#wl-clock-date {
+    font-size: x-large;
+}
+
+#wl-clock-heading,
 #wl-weather-heading {
     font-size: xx-large;
 }
 
 #wl-weather-temperature {
     font-size: 5em;
-    font-weight: bold;
 }
 
 #wl-weather-conditions {
