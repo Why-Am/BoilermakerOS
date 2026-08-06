@@ -178,6 +178,25 @@ ul {
     font-size: xx-large;
 }
 
+#wl-weather-heading {
+    font-size: xx-large;
+}
+
+#wl-weather-temperature {
+    font-size: 5em;
+    font-weight: bold;
+}
+
+#wl-weather-conditions {
+    font-size: x-large;
+    padding-bottom: 1em;
+}
+
+#wl-weather-refresh {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #desktop {
     flex-grow: 1;
 }
